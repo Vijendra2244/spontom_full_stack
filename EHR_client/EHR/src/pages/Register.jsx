@@ -27,7 +27,7 @@ function Register() {
 
     try {
       const res = await axios.post(
-        "http://localhost:8080/users/register",
+        "https://spontom-full-stack.onrender.com/users/register",
         userDetails,
         {
           withCredentials: true,

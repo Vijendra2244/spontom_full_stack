@@ -24,7 +24,7 @@ function Dashboard() {
   const toast = useToast();
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/patients/", {
+      const res = await axios.get("https://spontom-full-stack.onrender.com/patients/", {
         withCredentials: true,
       });
       setData(res.data.data.findPatientDetails);
@@ -36,7 +36,7 @@ function Dashboard() {
   const handleUserDelete = async (id) => {
     try {
       const res = await axios.delete(
-        `http://localhost:8080/patients/delete/${id}`,
+        `https://spontom-full-stack.onrender.com/patients/delete/${id}`,
         { withCredentials: true }
       );
       setData((prevData) => prevData.filter((patient) => patient._id !== id));
@@ -66,7 +66,7 @@ function Dashboard() {
   const handleSaveEdit = async () => {
     try {
       const res = await axios.patch(
-        `http://localhost:8080/patients/update/${editPatientId}`,
+        `https://spontom-full-stack.onrender.com/patients/update/${editPatientId}`,
         { health: updatedHealth },
         { withCredentials: true }
       );

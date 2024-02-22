@@ -8,7 +8,7 @@ export const logoutUser = async () => {
     document.cookie =
       "access_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     const res = await axios.post(
-      "http://localhost:8080/users/logout",
+      "https://spontom-full-stack.onrender.com/users/logout",
       {},
       {
         withCredentials: true,

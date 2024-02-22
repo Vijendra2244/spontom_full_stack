@@ -28,7 +28,7 @@ function AddPatients() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `http://localhost:8080/patients/add`,
+        `https://spontom-full-stack.onrender.com/patients/add`,
         patientsDetails,
         {
           withCredentials: true,
