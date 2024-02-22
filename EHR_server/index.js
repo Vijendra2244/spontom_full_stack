@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://127.0.0.1:5173","https://spontom-full-stack.onrender.com"],
+    origin: ["http://127.0.0.1:5173","https://spontom-full-stack.onrender.com","https://ehrecord.netlify.app"],
     credentials: true,
   })
 );
